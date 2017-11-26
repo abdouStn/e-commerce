@@ -1,0 +1,30 @@
+*  { font-size: 24; font-style: bold; font-color: red;}
+
+.panier{
+  width: 40%;  /*Line width */
+  background-color: rgb(222, 154, 150); /* Line color */
+  height: 100%;  /*Override in-line if you want specific height. */
+  float: right; /* Causes the line to float to left of content.
+    You can instead use position:absolute or display:inline-block
+    if this fits better with your design */
+}
+
+body{
+    #background: white url(images/fond.png) ;
+}
+
+nav{
+	border: 2px solid black;
+    border-radius: 5px;
+    width: 55%;  /*Line width */
+    padding: 10px;
+    background-color: rgb(143, 194, 238);
+}
+
+.outlet{
+	//border: 2px solid black;
+    //border-radius: 5px;
+    width: 55%;  /*Line width */
+    padding: 10px;
+    //background-color: rgb(200,200,200);
+}

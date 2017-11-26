@@ -1,0 +1,13 @@
+<h2> Liste des marques trouvées: </h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+           <th class="col-sm-2"></th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let item of items">
+           <td> <button class="btn btn-info" (click)="appelComposantRechercheParMarqueSpecifique(item)"> {{item}} </button></td>
+       </tr>
+   </tbody>
+</table>

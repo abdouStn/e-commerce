@@ -1,0 +1,35 @@
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Panier</div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                   <th class="col-sm-2">Article</th>
+                   <th class="col-sm-1">Quantité</th>
+                   <th class="col-sm-1">Prix</th>
+                   <th class="col-sm-1">Total</th>
+                   <th class="col-sm-1"></th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let element of panier; let i=index">
+                    <td>{{ element.nom | uppercase }}</td>
+                    <td>{{ element.quantite }}</td>
+                    <td>{{ element.prix | number:'1.0-2'  }}€</td>
+                    <td>{{ element.prix * element.quantite | number:'1.0-2' }}€</td>
+                    <td><button class="btn btn-danger btn-block" (click)=supprimerArticle(i)><span class="fa fa-trash-o fa-lg"></span></button></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total achat</td>
+                    <td><strong>{{ total | number:'1.0-2' }}€</strong></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"><button type="submit" disabled class="btn btn-primary btn-block">Payer</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

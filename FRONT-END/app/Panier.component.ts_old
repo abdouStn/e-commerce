@@ -1,0 +1,41 @@
+import {Component} from '@angular/core';
+//import {FormBuilder, ControlGroup, Control, Validators} from '@angular/common';
+import {Article} from './article';
+
+//import {NumberValidator}   from './validators/number.validator';
+//import {ValidationMessages}   from './validators/validation-messages.component';
+
+@Component({
+  selector: 'panier',
+  templateUrl: 'templates/panier.html',
+  //styleUrls:   ['styles/panier.css']
+  //directives: [ValidationMessages]
+})
+
+export class PanierComponent
+{
+    private panier : Array<Article> = [new Article('test',2,3,'aa')];
+    private total: number;
+    //private form: ControlGroup;
+
+    //constructor() {}
+    ngOnInit() {  }
+
+    ajouterArticle(name: string, quantity: number, price: number, dbId: string) {
+        this.panier.push(new Article(name, quantity, price, dbId));
+
+        this.updateTotal();
+    }
+
+    supprimerArticle(index: number){
+        this.panier.splice(index, 1);
+        this.updateTotal();
+    }
+
+    updateTotal() {
+        this.total = 0;
+        for(let element of this.panier) {
+            this.total += element.getPrix() * element.getQuantite();
+        }
+    }
+}

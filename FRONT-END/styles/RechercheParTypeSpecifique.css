@@ -1,0 +1,19 @@
+span  { font-size: 24; font-style: bold; }
+input { font-size: 24; font-style: bold; }
+li{
+	display: inline-block;
+	list-style: none;
+	padding: 10px;
+	position: relative;
+	vertical-align: top;
+	width: 28px;
+	/*border: 1px solid black;*/
+}
+
+#prix{
+	color:red
+}
+
+#ajoutPanier{
+	color:blue
+}

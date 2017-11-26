@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">{{titre}}</div>
+	<div class="panel-body text-center">
+	     <input (keyup)="setMarque(choixMarque.value)" value="Apple" #choixMarque />
+	   <!--Marque choisie : {{marque}} -->
+
+	   <a [routerLink]="['/rechercheParMarqueSpecifique', marque ]"><span class="btn btn-success"> <i class="glyphicon glyphicon-search"></i> marque </span> </a>
+	   <a [routerLink]="['/rechercheParTypeSpecifique', type ]"> <span class="btn btn-success"> <i class="glyphicon glyphicon-search"></i> type </span> </a>
+	   <br/><br/>
+	   <a [routerLink]="['/rechercheParMarque']"> <span class="btn btn-success"> <i class="glyphicon glyphicon-search"></i> toutes marques </span> </a>
+	   <a [routerLink]="['/rechercheParType']"> <span class="btn btn-success"> <i class="glyphicon glyphicon-search"></i> tous types </span> </a>
+
+	   <hr>
+		<div class="outlet">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>

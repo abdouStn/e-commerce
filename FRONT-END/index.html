@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <title>Importation des données JSON via Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+
+  <body>
+      <div class="jumbotron">
+    <h1>Site de Vente en ligne</h1>
+    <p>Cette application, développée dans le cadre du cours "Technologie du web avancée" est un concentré de nouvelles techno dont Angular2 pour la partie cliente; NodeJS et MongoDB pour la partie serveur.</p>
+    <p>
+        <a class="btn btn-lg btn-info" href="mailto:abdouldiallo30@yahoo.fr" role="button">Me contacter</a>
+    </p>
+</div>
+      <div class="row col-sm-12">
+          <section class="col-sm-9">
+              <menu>Loading...</menu>  <!-- on remplace le composant par celui qu'on vient de créer -->
+          </section>
+          <section class="col-sm-3">
+              <panier>Loading...</panier>
+          </section>
+      </div>
+  </body>
+</html>

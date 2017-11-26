@@ -1,0 +1,20 @@
+<h2> Liste des produits de type {{type}} </h2>
+
+<table class="table ">
+    <thead>
+        <tr>
+           <th class="col-sm-2"></th>
+           <th class="col-sm-5"></th>
+           <th class="col-sm-1"></th>
+           <th class="col-sm-1"></th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let element of items">
+            <td><img src="./images/{{element.image}}" width="100%"/></td>
+            <td><b>{{ element.nom }}</b><i> {{ element.type }} de marque {{ element.marque }}</i><br> <b>{{element.stock}}</b> en stock</td>
+            <td><b>{{ element.prix  }}</b>€</td>
+            <td><button class="btn btn-info btn-block" (click)="ajouterArticle(element.marque, 1, element.prix, element._id)"><span class="glyphicon glyphicon-plus"> panier</span></button></td>
+        </tr>
+    </tbody>
+</table>
